@@ -1,0 +1,10 @@
+version: '3'
+services: 
+    py:
+        build: ./docker/python/
+        tty: True
+    server:
+        build: ./docker/code-server/
+        tty: True
+        ports: 
+            - 8080:8080
