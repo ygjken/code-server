@@ -1,2 +1,2 @@
-FROM python:3.9.5-slim
-WORKDIR /workspace
+FROM codercom/code-server:latest
+CMD [ "code-server" ]

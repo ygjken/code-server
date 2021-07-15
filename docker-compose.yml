@@ -1,10 +1,18 @@
 version: '3'
-services: 
+services:
     py:
         build: ./docker/python/
         tty: True
+        volumes:
+            - .:/workspace
+        working_dir: /workspace
     server:
         build: ./docker/code-server/
         tty: True
+        environment:
+            PASSWORD: "password"
         ports: 
             - 8080:8080
+        volumes:
+            - .:/workspace
+        working_dir: /workspace
